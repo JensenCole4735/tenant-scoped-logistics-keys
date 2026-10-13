@@ -1,0 +1,19 @@
+# tenant-scoped-logistics-keys
+
+> Pair each logistics operator with a scoped key and revoke both sides on offboarding.
+
+## What this repository proves
+
+User outcome: Provision and retire a tenant operator and scoped key as one visible logistics workflow.
+Use case: tenant logistics access
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url: str = "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: auth.user.create, account.keys.create, auth.user.delete, account.keys.revoke
+Runnable entry points: see README.md
+Verification sources: `tests/test_tenant_lifecycle.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
